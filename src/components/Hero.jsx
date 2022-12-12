@@ -6,44 +6,32 @@ function Hero() {
 
   return (
 
-<main>
-        <div className="relative px-6 lg:px-8">
+<main className="banner opacity-95 bg-[url('https://images.unsplash.com/photo-1452573992436-6d508f200b30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80')]">
+        <div className="relative px-6 lg:px-8 ">
           <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
             <div>
-              <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  <span className="text-gray-600">
-                    Announcing our next round of funding.{' '}
-                    <a href="#" className="font-semibold text-indigo-600">
-                      <span className="absolute inset-0" aria-hidden="true" />
-                      Read more <span aria-hidden="true">&rarr;</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
               <div>
-                <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                  Data to enrich your online business
+                <h1 className="text-4xl text-white font-bold tracking-tight sm:text-center sm:text-6xl">
+                  Colorado's Prestigious Bike Race
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat aliqua.
+                <p className="mt-6 text-lg leading-8 text-white sm:text-center">
+                The bike race takes place in Colorado at the foot of the Rocky Mountains. It's the Boulder Bike Tour, and it's coming up next year! 
                 </p>
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                   <a
-                    href="#"
-                    className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
+                    href="/bikers"
+                    className="inline-block rounded-lg bg-red-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-red-700 hover:bg-red-800 hover:ring-red-800"
                   >
-                    Get started
+                    See The Bikers
                     <span className="text-indigo-200" aria-hidden="true">
                       &rarr;
                     </span>
                   </a>
                   <a
-                    href="#"
-                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                    href="/contest"
+                    className="inline-block rounded-lg bg-gray-200 px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20 hover:bg-gray-300"
                   >
-                    Live demo
+                    Join the contest
                     <span className="text-gray-400" aria-hidden="true">
                       &rarr;
                     </span>
