@@ -1,11 +1,16 @@
+/*import tailwind*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
 }
 
+.leaflet-container {
+  width: auto;
+  height: 50vh;
+  z-index: 0;
+}
