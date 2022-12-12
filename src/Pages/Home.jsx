@@ -6,7 +6,7 @@ export default function Home() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/v1/bikers')
+    axios.get('https://fierce-badlands-13020.herokuapp.com/api/v1/bikers')
       .then((response) => {
         setData(response.data);
       });
