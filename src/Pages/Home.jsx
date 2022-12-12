@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Hero from '../components/Hero';
 import axios from 'axios';
 
 export default function Home() {
-  const [data, setData] = React.useState(null);
+  const [data, setData] = useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     axios.get('http://localhost:3001/api/v1/bikers')
       .then((response) => {
         setData(response.data);
