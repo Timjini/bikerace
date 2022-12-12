@@ -7,6 +7,16 @@ import L from 'leaflet';
 
 function Map() {
     const [data, setData] = useState(null);
+    const [loader, setLoader] = useState(true);
+
+    //load the map after the data is loaded
+
+    useEffect (() => {
+      if (data) {
+        setLoader(false);
+      }
+    }, [data]);
+
 
     useEffect(() => {
       axios.get('https://fierce-badlands-13020.herokuapp.com/api/v1/bikers')
@@ -30,14 +40,19 @@ function Map() {
   
   
     return (
-      <><MapContainer center={[40.01, -105.26]} zoom={12} scrollWheelZoom={false}>
+      <>
+      {loader && <div className="loader"></div>}
+      
+      <MapContainer center={[40.01, -105.26]} zoom={11} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {data && data.map((biker) => (
             <Marker key={biker.id} position={[biker.latitude, biker.longitude]} icon={icon} >
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              {biker.first_name} {biker.last_name} <br />
+              {biker.state_of_origin} {biker.city_of_origin} <br />
+
             </Popup>
           </Marker>
           ))}
