@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './Pages/Home';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
-import About from './Pages/About';
+import Contest from './Pages/Contest';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BikersPage from './Pages/BikersPage';
@@ -16,7 +16,7 @@ function App() {
     <Navbar />
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About/>} />
+          <Route path="/Contest" element={<Contest/>} />
           <Route path="/bikers" element={<BikersPage />} />
       </Routes>
     <Footer />

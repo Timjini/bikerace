@@ -9,7 +9,7 @@ export default function CTA() {
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
               <a
-                href="#"
+                href="/contest"
                 className="inline-flex items-center justify-center rounded-md border border-transparent bg-red-700 px-5 py-3 text-base font-medium text-white hover:bg-red-800"
               >
                 Participate
