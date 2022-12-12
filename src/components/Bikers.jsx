@@ -14,10 +14,14 @@ export default function Bikers() {
   
   
     return (
-      <div>
+      <div className='biker__container'>
       {data && data.map((biker) => (
         <div key={biker.id}>
-          <h1>{biker.first_name}</h1>
+          <div className="biker__card">
+            <h1>{biker.first_name} {biker.last_name}</h1>
+            <p> City : {biker.city_of_origin}</p>
+            {biker.state_of_origin}
+          </div>
         </div>
       ))}
   

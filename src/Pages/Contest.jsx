@@ -1,8 +1,11 @@
 import React from 'react'
+import ContestForm from '../components/ContestForm'
 
 function About() {
   return (
-    <div>Contest</div>
+    <>
+    <ContestForm />
+    </>
   )
 }
 
