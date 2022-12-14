@@ -124,14 +124,16 @@
   text-align: center;
 }
 
-.thank-you-page{
+.errorPage{
   display: flex;
-  padding: 50px;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
 
 .thankYouTitle{
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
@@ -141,4 +143,9 @@
   display: flex;
   justify-content: center;
 
+}
+
+.notFound {
+  width: auto!important;
+  max-width: 50vw;
 }

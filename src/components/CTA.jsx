@@ -17,10 +17,10 @@ export default function CTA() {
             </div>
             <div className="ml-3 inline-flex rounded-md shadow">
               <a
-                href="#"
+                href="/bikers"
                 className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-red-700 hover:bg-red-50"
               >
-                More info
+                Check the Bikers
               </a>
             </div>
           </div>

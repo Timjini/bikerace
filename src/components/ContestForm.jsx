@@ -82,8 +82,8 @@ function ContestForm() {
       <h1 className="text-2xl font-bold sm:text-3xl">Get started today!</h1>
 
       <p className="mt-4 text-gray-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla
-        eaque error neque ipsa culpa autem, at itaque nostrum!
+        Send us an idea of a slogan for the competition<br/>
+        the winner will get a free trip to the event 🚲
       </p>
     </div>
 
@@ -160,7 +160,7 @@ function ContestForm() {
         type="submit"
         className="ml-3 inline-block rounded-lg bg-red-700 px-5 py-3 text-sm font-medium text-white"
       >
-        Submit
+        Send
       </button>
     </div>
 

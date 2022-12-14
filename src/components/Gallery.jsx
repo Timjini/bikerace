@@ -14,7 +14,7 @@ const [page, setPage] = useState(1);
 
 
 useEffect(() => {
-    axios.get(`https://api.pexels.com/v1/search?query=cycling&per_page=10&page=${page}`, {
+    axios.get(`https://api.pexels.com/v1/search?query=cycling&per_page=6&page=${page}`, {
         headers: {
                 accept: 'application/json',
                 Authorization : "563492ad6f91700001000001c5a80c11984b4823b56ed6918e0c232a",

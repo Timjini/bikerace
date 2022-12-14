@@ -6,7 +6,7 @@ import Contest from './Pages/Contest';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BikersPage from './Pages/BikersPage';
-import ThankYouPage from './Pages/ThankYouPage';
+import ErrorPage from './Pages/ErrorPage';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Contest" element={<Contest/>} />
           <Route path="/bikers" element={<BikersPage />} />
-          <Route path="/thank-you" element={<ThankYouPage />} />
+          <Route path="/*" element={<ErrorPage />} />
       </Routes>
     <Footer />
     </BrowserRouter>
