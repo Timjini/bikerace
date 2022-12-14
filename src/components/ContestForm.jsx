@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
+import confirmationImg from '../assets/happy.webp';
 
 function ContestForm() {
 
@@ -21,18 +22,54 @@ function ContestForm() {
             axios.post('https://fierce-badlands-13020.herokuapp.com/api/v1/contests', {
                 email: email,
                 slogan: slogan,
-                first_name: 'first_name',
-                last_name: 'last_name'
+                first_name: first_name,
+                last_name: last_name
             })
                 .then(res => {
                     console.log(res)
-                    history.push('/thank-you')
+                    setConfirmation(true)
                 })
                 .catch(err => {
                     console.log(err)
                 })
         }
     }
+
+
+    // confirmation div 
+    const [confirmation, setConfirmation] = useState(false)
+
+    if (confirmation) {
+        return (
+          <section className="relative flex flex-wrap lg:h-screen lg:items-center">
+          <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+            <div className="mx-auto max-w-lg text-center">
+              <h1 className="text-2xl font-bold sm:text-3xl">Thank you for participating</h1>
+        
+              <p className="mt-4 text-gray-500">
+                <img src={confirmationImg} alt="confirmation" className='confirmationImg' />
+                <a
+              href="/"
+              className="ml-3 inline-block rounded-lg bg-red-700 px-5 py-3 text-sm font-medium text-white"
+            >
+              Go Back
+            </a>
+              </p>
+            </div>
+          </div>
+        
+          <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+            <img
+              alt="Welcome"
+              src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        </section>
+        
+        )
+    }
+
 
 
 
@@ -121,7 +158,7 @@ function ContestForm() {
 
       <button
         type="submit"
-        className="ml-3 inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+        className="ml-3 inline-block rounded-lg bg-red-700 px-5 py-3 text-sm font-medium text-white"
       >
         Submit
       </button>
