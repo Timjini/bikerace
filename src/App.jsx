@@ -6,6 +6,7 @@ import Contest from './Pages/Contest';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BikersPage from './Pages/BikersPage';
+import ThankYouPage from './Pages/ThankYouPage';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Contest" element={<Contest/>} />
           <Route path="/bikers" element={<BikersPage />} />
+          <Route path="/thank-you" element={<ThankYouPage />} />
       </Routes>
     <Footer />
     </BrowserRouter>

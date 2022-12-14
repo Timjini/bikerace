@@ -49,23 +49,23 @@ function Counter() {
         <div className="counter">
             <div className="counter__item">
                 <div className="counter__item__number">{months}</div>
-                <div className="counter__item__text">Months</div>
+                <div className="counter__item__text">Mos</div>
             </div>
             <div className="counter__item">
                 <div className="counter__item__number">{days}</div>
-                <div className="counter__item__text">Days</div>
+                <div className="counter__item__text">D</div>
             </div>
             <div className="counter__item">
                 <div className="counter__item__number">{hours}</div>
-                <div className="counter__item__text">Hours</div>
+                <div className="counter__item__text">Hrs</div>
             </div>
             <div className="counter__item">
                 <div className="counter__item__number">{minutes}</div>
-                <div className="counter__item__text">Minutes</div>
+                <div className="counter__item__text">Min</div>
             </div>
             <div className="counter__item">
                 <div className="counter__item__number">{seconds}</div>
-                <div className="counter__item__text">Seconds</div>
+                <div className="counter__item__text">Sec</div>
             </div>
         </div>
     )

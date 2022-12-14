@@ -1,12 +1,14 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import axios from 'axios';
 
 function ContestForm() {
 
 
-    const [email, setEmail] = React.useState('')
-    const [slogan, setSlogan] = React.useState('')
-    const [error, setError] = React.useState('')
+    const [email, setEmail] = useState('')
+    const [slogan, setSlogan] = useState('')
+    const [error, setError] = useState('')
+    const [first_name, setFirst_name] = useState('')
+    const [last_name, setLast_name] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -14,6 +16,21 @@ function ContestForm() {
             setError('Slogan must be 50 characters or less')
         } else {
             setError('')
+        }
+        if (email.length > 0 && slogan.length > 0) {
+            axios.post('https://fierce-badlands-13020.herokuapp.com/api/v1/contests', {
+                email: email,
+                slogan: slogan,
+                first_name: 'first_name',
+                last_name: 'last_name'
+            })
+                .then(res => {
+                    console.log(res)
+                    history.push('/thank-you')
+                })
+                .catch(err => {
+                    console.log(err)
+                })
         }
     }
 
@@ -35,13 +52,14 @@ function ContestForm() {
 
     <form action="" className="mx-auto mt-8 mb-0 max-w-md space-y-4" onSubmit={handleSubmit}>
     <div>
-        <label for="email" className="sr-only">Email</label>
+        <label htmlFor="email" className="sr-only">Email</label>
 
         <div className="relative">
           <input
             type="email"
             className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter email"
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <span className="absolute inset-y-0 right-4 inline-flex items-center">
@@ -53,9 +71,9 @@ function ContestForm() {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
               />
             </svg>
@@ -63,44 +81,47 @@ function ContestForm() {
         </div>
       </div>
     <div>
-        <label for="text" className="sr-only">First Name</label>
+        <label htmlFor="text" className="sr-only">First Name</label>
         <div className="relative">
           <input
             type="text"
             className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter Your First Name"
+            onChange={(e) => setFirst_name(e.target.value)}
           />
 
         </div>
       </div>
       <div>
-        <label for="text" className="sr-only">Last Name</label>
+        <label htmlFor="text" className="sr-only">Last Name</label>
         <div className="relative">
           <input
             type="text"
             className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter Your Last Name"
+            onChange={(e) => setLast_name(e.target.value)}
           />
 
         </div>
       </div>
 
       <div>
-        <label for="password" className="sr-only">Slogan</label>
+        <label htmlFor="password" className="sr-only">Slogan</label>
         <div className="relative">
           <textarea
             type="password"
             className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Max.50 caractères Slogan" 
+            onChange={(e) => setSlogan(e.target.value)}
           />
         </div>
       </div>
 
-      <div class="flex items-center justify-between">
+      <div className="flex items-center justify-between">
 
       <button
         type="submit"
-        class="ml-3 inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+        className="ml-3 inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
       >
         Submit
       </button>
