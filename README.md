@@ -1,4 +1,4 @@
-# [Bikerace App 🚵‍♂️](https://https://biker-race.netlify.app/)
+# [Bikerace App 🚵‍♂️](https://bikerace-oc.netlify.app/)
 ##### This is an application on React/vite that fetches data from Rails Api using axios and posts a form with a confirmation message for contesters.
 - The fetched data of the bikers displayed on LeafletJs Map
 - Used Tailwind for styling
@@ -9,7 +9,7 @@
 # Libraries used
 - <a href="https://www.flickr.com/services/api/" target="_blank">Flickr Api</a>
 - <a href="https://react-leaflet.js.org/" target="_blank">Leaflet Js</a>
-- <a href="https://fierce-badlands-13020.herokuapp.com/api/v1/bikers" target="_blank">Json Data from Rails</a>
+- <a href="https://serene-castle-01441.herokuapp.com//api/v1/bikers" target="_blank">Json Data from Rails</a>
 
 # Deployed By 
 Hatim Laajini <br/>
