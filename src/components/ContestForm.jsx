@@ -19,7 +19,7 @@ function ContestForm() {
             setError('')
         }
         if (email.length > 0 && slogan.length > 0) {
-            axios.post('https://fierce-badlands-13020.herokuapp.com/api/v1/contests', {
+            axios.post('https://serene-castle-01441.herokuapp.com/api/v1/contests', {
                 email: email,
                 slogan: slogan,
                 first_name: first_name,

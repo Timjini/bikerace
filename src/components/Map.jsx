@@ -19,7 +19,7 @@ function Map() {
 
 
     useEffect(() => {
-      axios.get('https://fierce-badlands-13020.herokuapp.com/api/v1/bikers')
+      axios.get('https://serene-castle-01441.herokuapp.com/api/v1/bikers')
         .then((response) => {
           setData(response.data);
           console.log(response.data);
