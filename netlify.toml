@@ -1,5 +1,2 @@
-[[redirects]]
-  from = "/*"
-  to = "https://serene-castle-01441.herokuapp.com/api/v1/bikers"
-  status = 200
-  force = true
+/* /index.html 200
+/api/v1/bikers https://serene-castle-01441.herokuapp.com/api/v1/bikers 200
