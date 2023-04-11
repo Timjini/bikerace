@@ -1,9 +1,9 @@
 [[redirects]]
-from = "/*"
-to = "index.html"
-status= 200
+from = "/api/v1/bikers"
+to = "https://serene-castle-01441.herokuapp.com/api/v1/bikers"
+status = 200
 
 [[redirects]]
-from = "/index.html"
-to = "https://serene-castle-01441.herokuapp.com/api/v1/bikers"
-status= 200
+from = "/*"
+to = "/index.html"
+status = 200
