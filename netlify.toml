@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/*"
+  from = "/bikers"
   to = "https://serene-castle-01441.herokuapp.com/api/v1/bikers"
   status = 200
-  force = true # COMMENT: ensure that we always redirect
+  force = true 
   headers = {X-From = "Netlify"}
