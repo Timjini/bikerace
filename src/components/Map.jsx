@@ -19,15 +19,21 @@ function Map() {
 
 
     async function getData() {
-      const res = await axios.get('https://serene-castle-01441.herokuapp.com/api/v1/bikers',
-      {
-        headers: { 'Content-Type': 'application/json;charset=UTF-8',
-                    'Access-Control-Allow-Origin': '*',
-                    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-      }
-      });
-      setData(res.data);
-      console.log(res.data);
+      const res = axios ({
+        method: 'get',
+        url: 'https://cors-anywhere.herokuapp.com/https://serene-castle-01441.herokuapp.com/api/v1/bikers',
+        headers: {
+          'Origin': 'https://serene-castle-01441.herokuapp.com/api/v1/bikers',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+        }
+      })  
+
+      .then((res) => {
+        setData(res.data.incidents);
+      })
+
     }
 
     useEffect(() => {
