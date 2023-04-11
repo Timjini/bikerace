@@ -18,19 +18,13 @@ function Map() {
     }, [data]);
 
 
-    //load the data from the API
     useEffect(() => {
-      axios.get('https://bikerace-oc.netlify.app/bikers')
-      .then((response) => {
-        setData(response.data.incidents);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+      axios.get('https://serene-castle-01441.herokuapp.com/api/v1/bikers')
+        .then((response) => {
+          setData(response.data);
+          console.log(response.data);
+        });
     }, []);
-
-  
-
   
   //L icon for marker
   const icon = new L.Icon({
