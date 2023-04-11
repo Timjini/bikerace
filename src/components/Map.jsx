@@ -23,7 +23,6 @@ function Map() {
         method: 'get',
         url: 'https://cors-anywhere.herokuapp.com/https://serene-castle-01441.herokuapp.com/api/v1/bikers',
         headers: {
-          'Origin': 'https://serene-castle-01441.herokuapp.com/api/v1/bikers',
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
