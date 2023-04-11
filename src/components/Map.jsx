@@ -21,9 +21,9 @@ function Map() {
     async function getData() {
       const res = axios ({
         method: 'get',
-          url: 'https://serene-castle-01441.herokuapp.com/api/v1/bikers',
+          url: 'https://bikerace-oc.netlify.app/bikers',
         headers: {
-          'Access-Control-Allow-Origin': 'https://serene-castle-01441.herokuapp.com/api/v1/bikers',
+          'Access-Control-Allow-Origin': 'https://bikerace-oc.netlify.app/bikers',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
         }
       })  
