@@ -18,13 +18,22 @@ function Map() {
     }, [data]);
 
 
+    async function getData() {
+      const res = await axios.get('https://serene-castle-01441.herokuapp.com/api/v1/bikers',
+      {
+        headers: { 'Content-Type': 'application/json;charset=UTF-8',
+                    'Access-Control-Allow-Origin': '*',
+                    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+      }
+      });
+      setData(res.data);
+      console.log(res.data);
+    }
+
     useEffect(() => {
-      axios.get('https://serene-castle-01441.herokuapp.com/api/v1/bikers')
-        .then((response) => {
-          setData(response.data);
-          console.log(response.data);
-        });
+      getData();
     }, []);
+
   
   //L icon for marker
   const icon = new L.Icon({
