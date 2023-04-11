@@ -23,9 +23,7 @@ function Map() {
         method: 'get',
           url: 'https://serene-castle-01441.herokuapp.com/api/v1/bikers',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': 'https://serene-castle-01441.herokuapp.com/api/v1/bikers',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
         }
       })  
