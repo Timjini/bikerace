@@ -20,7 +20,7 @@ function Map() {
 
     //load the data from the API
     useEffect(() => {
-      axios.get('https://bikerace-oc.netlify.app/bikers.json')
+      axios.get('https://bikerace-oc.netlify.app/bikers')
       .then((response) => {
         setData(response.data.incidents);
       })
