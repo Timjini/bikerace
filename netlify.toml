@@ -1,4 +1,5 @@
 [[redirects]]
-from = "/*"
-to = "index.html"
-status= 200
+  from = "/home/*"
+  to = "https://serene-castle-01441.herokuapp.com/api/v1/bikers"
+  status = 200
+  force = true
