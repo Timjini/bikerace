@@ -18,25 +18,18 @@ function Map() {
     }, [data]);
 
 
-    async function getData() {
-      const res = axios ({
-        method: 'get',
-          url: 'https://bikerace-oc.netlify.app/bikers',
-        headers: {
-          'Access-Control-Allow-Origin': 'https://bikerace-oc.netlify.app/bikers',
-          'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-        }
-      })  
-
-      .then((res) => {
-        setData(res.data.incidents);
-      })
-
-    }
-
+    //load the data from the API
     useEffect(() => {
-      getData();
+      axios.get('https://bikerace-oc.netlify.app/bikers.json')
+      .then((response) => {
+        setData(response.data.incidents);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
     }, []);
+
+  
 
   
   //L icon for marker
