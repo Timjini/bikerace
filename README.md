@@ -1,4 +1,4 @@
-# [Bikerace App 🚵‍♂️](https://bikerace-oc.netlify.app/)
+# [Bikerace App 🚵‍♂️](https://bikerace-colorado.vercel.app/)
 ##### This is an application on React/vite that fetches data from Rails Api using axios and posts a form with a confirmation message for contesters.
 - The fetched data of the bikers displayed on LeafletJs Map
 - Used Tailwind for styling
